@@ -13,9 +13,9 @@ Styles
 - [Source Code Pro 20px](https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap) (Font)
 
 PDF, A4 print size
-- JSON Configuration: [`./config.pdf_a4.json`](./config.pdf_a4.json)
-- PDF Slideshow: [`./index.a4.pdf`](./index.a4.pdf)
+- JSON Configuration: [`./config.pdf.json`](./config.pdf.json)
+- PDF Slideshow: [`./index.pdf`](./index.pdf)
 
-HTML, Slide
-- JSON Configuration: [`./config.slide.json`](./config.slide.json)
+HTML, Slide layout
+- JSON Configuration: [`./config.html.json`](./config.html.json)
 - HTML Slideshow: [`./index.html`](./index.html)
