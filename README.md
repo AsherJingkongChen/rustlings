@@ -7,7 +7,7 @@ This repo is forked from [rust-lang/rustlings](https://github.com/rust-lang/rust
 - [CodeSlide CLI](https://github.com/AsherJingkongChen/codeslide/tree/main/packages/cli)
 - [Demo on GitHub Pages!](https://asherjingkongchen.github.io/rustlings-as-codeslide-example/)
 
-## Collection
+## Configuration
 Styles
 - [Tomorrow Night](https://doc.rust-lang.org/book/tomorrow-night.css) (Theme)
 - [Source Code Pro 20px](https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap) (Font)
