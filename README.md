@@ -12,10 +12,4 @@ Styles
 - [Tomorrow Night](https://doc.rust-lang.org/book/tomorrow-night.css) (Theme)
 - [Source Code Pro 20px](https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap) (Font)
 
-PDF, A4 print size
-- JSON Configuration: [`./config.pdf.json`](./config.pdf.json)
-- PDF Slideshow: [`./index.pdf`](./index.pdf)
-
-HTML, Slide layout
-- JSON Configuration: [`./config.html.json`](./config.html.json)
-- HTML Slideshow: [`./index.html`](./index.html)
+Maker Script: [`./make.sh`](./make.sh)

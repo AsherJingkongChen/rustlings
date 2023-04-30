@@ -6,17 +6,12 @@
     charset="utf-8"
     content="width=device-width, initial-scale=1, user-scalable=no">
   <style>
-/*! CodeSlide app.horizontal.css */
-body {
+/*! CodeSlide app.vertical.css */
+html, body {
   margin: 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   overflow: hidden;
-  overscroll-behavior: none;
-  scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 pre {
   margin: 0;
@@ -25,26 +20,14 @@ pre {
 }
 #slides {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute; /* fix height on mobile */
   width: 100vw;
   height: 100vh;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  overflow: scroll;
 }
-.slide {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scrollbar-width: none;
-}
-.slide::-webkit-scrollbar {
-  display: none;
+.slide > .title.bordered {
+  border-top: thin solid currentColor;
 }
 .slide > .title {
   font-size: larger;
@@ -208,7 +191,7 @@ code { font-family: Source Code Pro, ui-monospace, SFMono-Regular, SF Mono, Menl
       </div>
     </div>
     <div class="slide" id="_1" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">rustlings is at https://github.com/rust-lang/rustlings</code></pre>
       </div>
     </div>
@@ -411,7 +394,7 @@ You can make them mutable by adding `mut` in front of the variable name.
       </div>
     </div>
     <div class="slide" id="_4" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Variables 1</code></pre>
       </div>
       <div class="code">
@@ -429,7 +412,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_5" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Variables 2</code></pre>
       </div>
       <div class="code">
@@ -463,7 +446,7 @@ in more complex code.
       </div>
     </div>
     <div class="slide" id="_7" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Functions 1</code></pre>
       </div>
       <div class="code">
@@ -479,7 +462,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_8" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Functions 2</code></pre>
       </div>
       <div class="code">
@@ -513,7 +496,7 @@ fn call_me(num:) {
       </div>
     </div>
     <div class="slide" id="_10" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">If 1</code></pre>
       </div>
       <div class="code">
@@ -548,7 +531,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_11" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">If 2</code></pre>
       </div>
       <div class="code">
@@ -606,7 +589,7 @@ compiler. In this section, we&#39;ll go through the most important ones.
       </div>
     </div>
     <div class="slide" id="_13" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Primitive Types 1</code></pre>
       </div>
       <div class="code">
@@ -633,7 +616,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_14" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Primitive Types 2</code></pre>
       </div>
       <div class="code">
@@ -694,7 +677,7 @@ the other useful data structure, hash maps, later.
       </div>
     </div>
     <div class="slide" id="_16" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Vecs 1</code></pre>
       </div>
       <div class="code">
@@ -727,7 +710,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_17" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Vecs 2</code></pre>
       </div>
       <div class="code">
@@ -799,7 +782,7 @@ For this section, the book links are especially important.
       </div>
     </div>
     <div class="slide" id="_19" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Move Semantics 1</code></pre>
       </div>
       <div class="code">
@@ -833,7 +816,7 @@ fn fill_vec(vec: Vec&lt;i32&gt;) -&gt; Vec&lt;i32&gt; {
       </div>
     </div>
     <div class="slide" id="_20" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Move Semantics 2</code></pre>
       </div>
       <div class="code">
@@ -886,7 +869,7 @@ Rust has three struct types: a classic C struct, a tuple struct, and a unit stru
       </div>
     </div>
     <div class="slide" id="_22" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Structs 1</code></pre>
       </div>
       <div class="code">
@@ -942,7 +925,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_23" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Structs 2</code></pre>
       </div>
       <div class="code">
@@ -1012,7 +995,7 @@ Useful in combination with enums is Rust&#39;s &quot;pattern matching&quot; faci
       </div>
     </div>
     <div class="slide" id="_25" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Enums 1</code></pre>
       </div>
       <div class="code">
@@ -1036,7 +1019,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_26" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Enums 2</code></pre>
       </div>
       <div class="code">
@@ -1086,7 +1069,7 @@ to identify and create them, as well as use them.
       </div>
     </div>
     <div class="slide" id="_28" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Strings 1</code></pre>
       </div>
       <div class="code">
@@ -1108,7 +1091,7 @@ fn current_favorite_color() -&gt; String {
       </div>
     </div>
     <div class="slide" id="_29" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Strings 2</code></pre>
       </div>
       <div class="code">
@@ -1146,7 +1129,7 @@ In this section we&#39;ll give you an introduction to Rust&#39;s module system.
       </div>
     </div>
     <div class="slide" id="_31" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Modules 1</code></pre>
       </div>
       <div class="code">
@@ -1174,7 +1157,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_32" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Modules 2</code></pre>
       </div>
       <div class="code">
@@ -1229,7 +1212,7 @@ talking about Vecs.
       </div>
     </div>
     <div class="slide" id="_34" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Hashmaps 1</code></pre>
       </div>
       <div class="code">
@@ -1280,7 +1263,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_35" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Hashmaps 2</code></pre>
       </div>
       <div class="code">
@@ -1397,7 +1380,7 @@ Option types are very common in Rust code, as they have a number of uses:
       </div>
     </div>
     <div class="slide" id="_37" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Options 1</code></pre>
       </div>
       <div class="code">
@@ -1440,7 +1423,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_38" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Options 2</code></pre>
       </div>
       <div class="code">
@@ -1499,7 +1482,7 @@ For example, if you try to open a file and that operation fails because the file
       </div>
     </div>
     <div class="slide" id="_40" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Error Handling 1</code></pre>
       </div>
       <div class="code">
@@ -1546,7 +1529,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_41" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Error Handling 2</code></pre>
       </div>
       <div class="code">
@@ -1618,7 +1601,7 @@ The simplest and most common use of generics is for type parameters.
       </div>
     </div>
     <div class="slide" id="_43" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Generics 1</code></pre>
       </div>
       <div class="code">
@@ -1637,7 +1620,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_44" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Generics 2</code></pre>
       </div>
       <div class="code">
@@ -1700,7 +1683,7 @@ Because traits indicate shared behavior between data types, they are useful when
       </div>
     </div>
     <div class="slide" id="_46" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Traits 1</code></pre>
       </div>
       <div class="code">
@@ -1752,7 +1735,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_47" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Traits 2</code></pre>
       </div>
       <div class="code">
@@ -1804,7 +1787,7 @@ Going out of order from the book to cover tests -- many of the following exercis
       </div>
     </div>
     <div class="slide" id="_49" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Tests 1</code></pre>
       </div>
       <div class="code">
@@ -1830,7 +1813,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_50" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Tests 2</code></pre>
       </div>
       <div class="code">
@@ -1879,7 +1862,7 @@ learning to write lifetime annotations.
       </div>
     </div>
     <div class="slide" id="_52" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Lifetimes 1</code></pre>
       </div>
       <div class="code">
@@ -1913,7 +1896,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_53" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Lifetimes 2</code></pre>
       </div>
       <div class="code">
@@ -1961,7 +1944,7 @@ This section will teach you about Iterators.
       </div>
     </div>
     <div class="slide" id="_55" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Iterators 1</code></pre>
       </div>
       <div class="code">
@@ -1993,7 +1976,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_56" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Iterators 2</code></pre>
       </div>
       <div class="code">
@@ -2075,7 +2058,7 @@ Within your program, you can also have independent parts that run simultaneously
       </div>
     </div>
     <div class="slide" id="_58" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Threads 1</code></pre>
       </div>
       <div class="code">
@@ -2121,7 +2104,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_59" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Threads 2</code></pre>
       </div>
       <div class="code">
@@ -2180,7 +2163,7 @@ Smart pointers in Rust often own the data they point to, while references only b
       </div>
     </div>
     <div class="slide" id="_61" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Smart Pointers arc</code></pre>
       </div>
       <div class="code">
@@ -2230,7 +2213,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_62" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Smart Pointers box</code></pre>
       </div>
       <div class="code">
@@ -2294,7 +2277,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_63" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Smart Pointers cow</code></pre>
       </div>
       <div class="code">
@@ -2376,7 +2359,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_64" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Smart Pointers rc</code></pre>
       </div>
       <div class="code">
@@ -2502,7 +2485,7 @@ of exercises to Rustlings, but is all about learning to write Macros.
       </div>
     </div>
     <div class="slide" id="_66" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Macros 1</code></pre>
       </div>
       <div class="code">
@@ -2524,7 +2507,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_67" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Macros 2</code></pre>
       </div>
       <div class="code">
@@ -2561,7 +2544,7 @@ If not you can install it manually via `rustup component add clippy`.
       </div>
     </div>
     <div class="slide" id="_69" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Clippy 1</code></pre>
       </div>
       <div class="code">
@@ -2592,7 +2575,7 @@ fn main() {
       </div>
     </div>
     <div class="slide" id="_70" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Clippy 2</code></pre>
       </div>
       <div class="code">
@@ -2641,7 +2624,7 @@ These are not directly covered in the book, but the standard library has a great
       </div>
     </div>
     <div class="slide" id="_72" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Conversions as_ref_mut</code></pre>
       </div>
       <div class="code">
@@ -2710,7 +2693,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_73" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Conversions from_into</code></pre>
       </div>
       <div class="code">
@@ -2852,7 +2835,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_74" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Conversions from_str</code></pre>
       </div>
       <div class="code">
@@ -2987,7 +2970,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_75" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Conversions try_from_into</code></pre>
       </div>
       <div class="code">
@@ -3185,7 +3168,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_76" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Conversions using_as</code></pre>
       </div>
       <div class="code">
@@ -3222,7 +3205,7 @@ mod tests {
       </div>
     </div>
     <div class="slide" id="_77" hidden>
-      <div class="title">
+      <div class="title bordered">
         <pre><code class="language-plaintext hljs">Thanks to all contributors of rustlings!</code></pre>
       </div>
     </div>
