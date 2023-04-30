@@ -6,7 +6,7 @@ SLIDES=(
     "https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" \
     "https://doc.rust-lang.org/book/tomorrow-night.css" \
   --slides \
-    "This is an example of CodeSlide CLI." "" \
+    "This is an example of CodeSlide CLI" "" \
     "rustlings is at https://github.com/rust-lang/rustlings" "" \
     "" "./README.orig.md" \
     "" "./exercises/variables/README.md" \
@@ -104,6 +104,4 @@ echo "index.pdf" && \
 time ../../dist/index.js \
   -o ./index.pdf \
   --format pdf \
-  --layout vertical \
   "${SLIDES[@]}";
-  
