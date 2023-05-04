@@ -19,17 +19,13 @@ Colors taken from GitHub's CSS
 */.hljs{color:#adbac7;background:#22272e}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#f47067}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#dcbdfb}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#6cb6ff}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#96d0ff}.hljs-built_in,.hljs-symbol{color:#f69d50}.hljs-code,.hljs-comment,.hljs-formula{color:#768390}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#8ddb8c}.hljs-subst{color:#adbac7}.hljs-section{color:#316dca;font-weight:700}.hljs-bullet{color:#eac55f}.hljs-emphasis{color:#adbac7;font-style:italic}.hljs-strong{color:#adbac7;font-weight:700}.hljs-addition{color:#b4f1b4;background-color:#1b4721}.hljs-deletion{color:#ffd8d3;background-color:#78191b}
 a{color:#2f81f7}
 
-/*! CodeSlide slides.horizontal.css */
+/*! CodeSlide slides.vertical.css */
 html, body {
   margin: 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   overflow: hidden;
   overscroll-behavior: none;
-  scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 pre {
   margin: 0;
@@ -41,27 +37,15 @@ p:empty {
 }
 #slides {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: absolute; /* fix height on mobile */
   width: 100vw;
   height: 100vh;
-  overflow-x: scroll;
+  overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
 }
 .slide {
-  display: flex;
-  flex-direction: column;
-  min-width: calc(100vw - 4em);
-  height: calc(100vh - 2em);
-  overflow-y: scroll;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scrollbar-width: none;
-  padding: 1em 2em;
-}
-.slide::-webkit-scrollbar {
-  display: none;
+  padding: 1em 2em 0 2em;
 }
 @page {
   margin: 0;
@@ -210,6 +194,7 @@ p:empty {
     <h1 id="rustlings-as-an-example-of-codeslide-cli"><a href="https://github.com/rust-lang/rustlings">Rustlings</a> as an example of CodeSlide CLI</h1>
   </div>
   <div class="slide" id="_1">
+    <hr>
     <p><h1 id="rustlings-🦀❤️">rustlings 🦀❤️</h1>
 <p>Greetings and welcome to <code>rustlings</code>. This project contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!</p>
 <p><em>...looking for the old, web-based version of Rustlings? Try <a href="https://github.com/rust-lang/rustlings/tree/rustlings-1">here</a></em></p>
@@ -313,6 +298,7 @@ if you have ideas or suggestions!</p>
 </p>
   </div>
   <div class="slide" id="_2">
+    <hr>
     <p><h1 id="variables">Variables</h1>
 <p>In Rust, variables are immutable by default.
 When a variable is immutable, once a value is bound to a name, you can’t change that value.
@@ -349,6 +335,7 @@ You can make them mutable by adding <code>mut</code> in front of the variable na
 </code></pre></p>
   </div>
   <div class="slide" id="_3">
+    <hr>
     <p><h1 id="functions">Functions</h1>
 <p>Here, you&#39;ll learn how to write functions and how the Rust compiler can help you debug errors even
 in more complex code.</p>
@@ -383,6 +370,7 @@ in more complex code.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_4">
+    <hr>
     <p><h1 id="if">If</h1>
 <p><code>if</code>, the most basic (but still surprisingly versatile!) type of control flow, is what you&#39;ll learn here.</p>
 <h2 id="further-information">Further information</h2>
@@ -457,6 +445,7 @@ in more complex code.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_5">
+    <hr>
     <p><h1 id="primitive-types">Primitive Types</h1>
 <p>Rust has a couple of basic types that are directly implemented into the
 compiler. In this section, we&#39;ll go through the most important ones.</p>
@@ -520,6 +509,7 @@ compiler. In this section, we&#39;ll go through the most important ones.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_6">
+    <hr>
     <p><h1 id="vectors">Vectors</h1>
 <p>Vectors are one of the most-used Rust data structures. In other programming
 languages, they&#39;d simply be called Arrays, but since Rust operates on a
@@ -614,6 +604,7 @@ the other useful data structure, hash maps, later.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_7">
+    <hr>
     <p><h1 id="move-semantics">Move Semantics</h1>
 <p>These exercises are adapted from <a href="https://github.com/pnkfelix">pnkfelix</a>&#39;s <a href="https://pnkfelix.github.io/rust-examples-icfp2014/">Rust Tutorial</a> -- Thank you Felix!!!</p>
 <h2 id="further-information">Further information</h2>
@@ -685,6 +676,7 @@ the other useful data structure, hash maps, later.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_8">
+    <hr>
     <p><h1 id="structs">Structs</h1>
 <p>Rust has three struct types: a classic C struct, a tuple struct, and a unit struct.</p>
 <h2 id="further-information">Further information</h2>
@@ -792,6 +784,7 @@ the other useful data structure, hash maps, later.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_9">
+    <hr>
     <p><h1 id="enums">Enums</h1>
 <p>Rust allows you to define types called &quot;enums&quot; which enumerate possible values.
 Enums are a feature in many languages, but their capabilities differ in each language. Rust’s enums are most similar to algebraic data types in functional languages, such as F#, OCaml, and Haskell.
@@ -850,6 +843,7 @@ Useful in combination with enums is Rust&#39;s &quot;pattern matching&quot; faci
 </code></pre></p>
   </div>
   <div class="slide" id="_10">
+    <hr>
     <p><h1 id="strings">Strings</h1>
 <p>Rust has two string types, a string slice (<code>&amp;str</code>) and an owned string (<code>String</code>).
 We&#39;re not going to dictate when you should use which one, but we&#39;ll show you how
@@ -895,6 +889,7 @@ to identify and create them, as well as use them.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_11">
+    <hr>
     <p><h1 id="modules">Modules</h1>
 <p>In this section we&#39;ll give you an introduction to Rust&#39;s module system.</p>
 <h2 id="further-information">Further information</h2>
@@ -956,6 +951,7 @@ to identify and create them, as well as use them.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_12">
+    <hr>
     <p><h1 id="hashmaps">Hashmaps</h1>
 <p>A <em>hash map</em> allows you to associate a value with a particular key.
 You may also know this by the names <a href="https://en.cppreference.com/w/cpp/container/unordered_map"><em>unordered map</em> in C++</a>,
@@ -1097,6 +1093,7 @@ talking about Vecs.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_13">
+    <hr>
     <p><h1 id="options">Options</h1>
 <p>Type Option represents an optional value: every Option is either Some and contains a value, or None, and does not.
 Option types are very common in Rust code, as they have a number of uses:</p>
@@ -1192,6 +1189,7 @@ Option types are very common in Rust code, as they have a number of uses:</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_14">
+    <hr>
     <p><h1 id="error-handling">Error handling</h1>
 <p>Most errors aren’t serious enough to require the program to stop entirely.
 Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to.
@@ -1295,6 +1293,7 @@ For example, if you try to open a file and that operation fails because the file
 </code></pre></p>
   </div>
   <div class="slide" id="_15">
+    <hr>
     <p><h1 id="generics">Generics</h1>
 <p>Generics is the topic of generalizing types and functionalities to broader cases.
 This is extremely useful for reducing code duplication in many ways, but can call for rather involving syntax.
@@ -1352,6 +1351,7 @@ The simplest and most common use of generics is for type parameters.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_16">
+    <hr>
     <p><h1 id="traits">Traits</h1>
 <p>A trait is a collection of methods.</p>
 <p>Data types can implement traits. To do so, the methods making up the trait are defined for the data type. For example, the <code>String</code> data type implements the <code>From&lt;&amp;str&gt;</code> trait. This allows a user to write <code>String::from(&quot;hello&quot;)</code>.</p>
@@ -1448,6 +1448,7 @@ The simplest and most common use of generics is for type parameters.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_17">
+    <hr>
     <p><h1 id="tests">Tests</h1>
 <p>Going out of order from the book to cover tests -- many of the following exercises will ask you to make tests pass!</p>
 <h2 id="further-information">Further information</h2>
@@ -1491,6 +1492,7 @@ The simplest and most common use of generics is for type parameters.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_18">
+    <hr>
     <p><h1 id="lifetimes">Lifetimes</h1>
 <p>Lifetimes tell the compiler how to check whether references live long
 enough to be valid in any given situation. For example lifetimes say
@@ -1568,6 +1570,7 @@ learning to write lifetime annotations.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_19">
+    <hr>
     <p><h1 id="iterators">Iterators</h1>
 <p>This section will teach you about Iterators.</p>
 <h2 id="further-information">Further information</h2>
@@ -1664,6 +1667,7 @@ learning to write lifetime annotations.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_20">
+    <hr>
     <p><h1 id="threads">Threads</h1>
 <p>In most current operating systems, an executed program’s code is run in a process, and the operating system manages multiple processes at once.
 Within your program, you can also have independent parts that run simultaneously. The features that run these independent parts are called threads.</p>
@@ -1749,6 +1753,7 @@ Within your program, you can also have independent parts that run simultaneously
 </code></pre></p>
   </div>
   <div class="slide" id="_21">
+    <hr>
     <p><h1 id="smart-pointers">Smart Pointers</h1>
 <p>In Rust, smart pointers are variables that contain an address in memory and reference some other data, but they also have additional metadata and capabilities.
 Smart pointers in Rust often own the data they point to, while references only borrow data.</p>
@@ -2038,6 +2043,7 @@ Smart pointers in Rust often own the data they point to, while references only b
 </code></pre></p>
   </div>
   <div class="slide" id="_22">
+    <hr>
     <p><h1 id="macros">Macros</h1>
 <p>Rust&#39;s macro system is very powerful, but also kind of difficult to wrap your
 head around. We&#39;re not going to teach you how to write your own fully-featured
@@ -2083,6 +2089,7 @@ of exercises to Rustlings, but is all about learning to write Macros.</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_23">
+    <hr>
     <p><h1 id="clippy">Clippy</h1>
 <p>The Clippy tool is a collection of lints to analyze your code so you can catch common mistakes and improve your Rust code.</p>
 <p>If you used the installation script for Rustlings, Clippy should be already installed.
@@ -2132,6 +2139,7 @@ If not you can install it manually via <code>rustup component add clippy</code>.
 </code></pre></p>
   </div>
   <div class="slide" id="_24">
+    <hr>
     <p><h1 id="type-conversions">Type conversions</h1>
 <p>Rust offers a multitude of ways to convert a value of a given type into another type.</p>
 <p>The simplest form of type conversion is a type cast expression. It is denoted with the binary operator <code>as</code>. For instance, <code>println!(&quot;{}&quot;, 1 + 1.0);</code> would not compile, since <code>1</code> is an integer while <code>1.0</code> is a float. However, <code>println!(&quot;{}&quot;, 1 as f32 + 1.0)</code> should compile. The exercise <a href="using_as.rs"><code>using_as</code></a> tries to cover this.</p>
@@ -2699,6 +2707,7 @@ The traits are the following:</p>
 </code></pre></p>
   </div>
   <div class="slide" id="_25">
+    <hr>
     <h1 id="thanks-to-all-contributors-of-rustlings">Thanks to all contributors of <a href="https://github.com/rust-lang/rustlings">rustlings</a>!</h1>
   </div>
   </div>
