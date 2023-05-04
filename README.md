@@ -1,4 +1,4 @@
-# rustlings as an example for CodeSlide CLI
+# rustlings as an example for CodeSlide CLI (Outdated)
 
 ## Acknowledgement
 This repo is forked from [rust-lang/rustlings](https://github.com/rust-lang/rustlings/). It collects Rust language examples.
