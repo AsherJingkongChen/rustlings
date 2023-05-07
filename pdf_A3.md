@@ -3,7 +3,7 @@ codeslide:
   version: 0.12.0
   fontFamily: Source Code Pro
   format: pdf
-  pagesize: a3
+  pageSize: A3
   styles:
     - https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap
     - https://doc.rust-lang.org/book/tomorrow-night.css
