@@ -6,7 +6,15 @@
     charset="utf-8"
     content="width=device-width, initial-scale=1, user-scalable=no">
   <style>
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
+/*!
 Retrieved from https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark-dimmed.min.css
 
 Theme: GitHub Dark Dimmed
@@ -16,8 +24,84 @@ Maintainer: @Hirse
 Updated: 2021-05-15
 
 Colors taken from GitHub's CSS
-*/.hljs{color:#adbac7;background:#22272e}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#f47067}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#dcbdfb}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#6cb6ff}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#96d0ff}.hljs-built_in,.hljs-symbol{color:#f69d50}.hljs-code,.hljs-comment,.hljs-formula{color:#768390}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#8ddb8c}.hljs-subst{color:#adbac7}.hljs-section{color:#316dca;font-weight:700}.hljs-bullet{color:#eac55f}.hljs-emphasis{color:#adbac7;font-style:italic}.hljs-strong{color:#adbac7;font-weight:700}.hljs-addition{color:#b4f1b4;background-color:#1b4721}.hljs-deletion{color:#ffd8d3;background-color:#78191b}
-a{color:#2f81f7}
+*/
+.hljs {
+  color: #adbac7;
+  background: #22272e;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  color: #f47067;
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  color: #dcbdfb;
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-variable {
+  color: #6cb6ff;
+}
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+  color: #96d0ff;
+}
+.hljs-built_in,
+.hljs-symbol {
+  color: #f69d50;
+}
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
+  color: #768390;
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+  color: #8ddb8c;
+}
+.hljs-subst {
+  color: #adbac7;
+}
+.hljs-section {
+  color: #316dca;
+  font-weight: 700;
+}
+.hljs-bullet {
+  color: #eac55f;
+}
+.hljs-emphasis {
+  color: #adbac7;
+  font-style: italic;
+}
+.hljs-strong {
+  color: #adbac7;
+  font-weight: 700;
+}
+.hljs-addition {
+  color: #b4f1b4;
+  background-color: #1b4721;
+}
+.hljs-deletion {
+  color: #ffd8d3;
+  background-color: #78191b;
+}
 
 /*! CodeSlide slides.horizontal.css */
 html, body {
@@ -28,16 +112,30 @@ html, body {
   overscroll-behavior: none;
   scrollbar-width: none;
 }
+a{
+  color: dodgerblue;
+}
 body::-webkit-scrollbar {
   display: none;
 }
-pre {
-  margin: 0;
-  white-space: pre-wrap;
-  word-break: break-word;
+li {
+  margin-top: 0.3em;
 }
 p:empty {
   display: none;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.slide {
+  min-width: calc(100vw - 4em);
+  height: calc(100vh - 2em);
+  overflow-y: scroll;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scrollbar-width: none;
+  padding: 1em 2em;
 }
 #slides {
   display: flex;
@@ -48,17 +146,6 @@ p:empty {
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-}
-.slide {
-  display: flex;
-  flex-direction: column;
-  min-width: calc(100vw - 4em);
-  height: calc(100vh - 2em);
-  overflow-y: scroll;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scrollbar-width: none;
-  padding: 1em 2em;
 }
 @media only screen and (max-width: 768px) {
   .slide {
@@ -204,9 +291,15 @@ p:empty {
   color: #c82829;
 }
 
-code, .hljs { font-family: Source Code Pro, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; }
-#slides { font-size: large; }
-#slides { font-weight: normal; }
+code {
+  font-family: Source Code Pro, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: smaller;
+}
+#slides {
+  font-size: large;
+  font-weight: normal;
+  line-height: 1.5;
+}
   </style>
 </head>
 <body class="hljs">
@@ -237,20 +330,20 @@ code, .hljs { font-family: Source Code Pro, ui-monospace, SFMono-Regular, SF Mon
 <p>This will install Rustlings and give you access to the <code>rustlings</code> command. Run it to get started!</p>
 <h3 id="nix">Nix</h3>
 <p>Basically: Clone the repository at the latest tag, finally run <code>nix develop</code> or <code>nix-shell</code>.</p>
-<pre><code class="language-bash"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)
-git clone -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
-cd rustlings
-# if nix version &gt; 2.3
+<pre><code class="language-bash"><span class="hljs-comment"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)</span>
+git <span class="hljs-built_in">clone</span> -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
+<span class="hljs-built_in">cd</span> rustlings
+<span class="hljs-comment"># if nix version &gt; 2.3</span>
 nix develop
-# if nix version &lt;= 2.3
+<span class="hljs-comment"># if nix version &lt;= 2.3</span>
 nix-shell
 </code></pre>
 <h2 id="windows">Windows</h2>
 <p>In PowerShell (Run as Administrator), set <code>ExecutionPolicy</code> to <code>RemoteSigned</code>:</p>
-<pre><code class="language-ps1">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+<pre><code class="language-ps1"><span class="hljs-built_in">Set-ExecutionPolicy</span> <span class="hljs-literal">-ExecutionPolicy</span> RemoteSigned <span class="hljs-literal">-Scope</span> CurrentUser
 </code></pre>
 <p>Then, you can run:</p>
-<pre><code class="language-ps1">Start-BitsTransfer -Source https://raw.githubusercontent.com/rust-lang/rustlings/main/install.ps1 -Destination $env:TMP/install_rustlings.ps1; Unblock-File $env:TMP/install_rustlings.ps1; Invoke-Expression $env:TMP/install_rustlings.ps1
+<pre><code class="language-ps1"><span class="hljs-built_in">Start-BitsTransfer</span> <span class="hljs-literal">-Source</span> https://raw.githubusercontent.com/rust<span class="hljs-literal">-lang</span>/rustlings/main/install.ps1 <span class="hljs-literal">-Destination</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1; <span class="hljs-built_in">Unblock-File</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1; <span class="hljs-built_in">Invoke-Expression</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1
 </code></pre>
 <p>To install Rustlings. Same as on MacOS/Linux, you will have access to the <code>rustlings</code> command after it. Keep in mind that this works best in PowerShell, and any other terminals may give you errors.</p>
 <p>If you get a permission denied message, you might have to exclude the directory where you cloned Rustlings in your antivirus.</p>
@@ -259,9 +352,9 @@ nix-shell
 <p><a href="https://github.com/codespaces/new/?repo=rust-lang%2Frustlings&ref=main"><img src="https://github.com/codespaces/badge.svg" alt="Open Rustlings On Codespaces"></a></p>
 <h2 id="manually">Manually</h2>
 <p>Basically: Clone the repository at the latest tag, run <code>cargo install --path .</code>.</p>
-<pre><code class="language-bash"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)
-git clone -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
-cd rustlings
+<pre><code class="language-bash"><span class="hljs-comment"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)</span>
+git <span class="hljs-built_in">clone</span> -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
+<span class="hljs-built_in">cd</span> rustlings
 cargo install --force --path .
 </code></pre>
 <p>If there are installation errors, ensure that your toolchain is up to date. For the latest, run:</p>
@@ -302,7 +395,7 @@ exercise:</p>
 <h2 id="uninstalling-rustlings">Uninstalling Rustlings</h2>
 <p>If you want to remove Rustlings from your system, there are two steps. First, you&#39;ll need to remove the exercises folder that the install script created
 for you:</p>
-<pre><code class="language-bash">rm -rf rustlings # or your custom folder name, if you chose and or renamed it
+<pre><code class="language-bash"><span class="hljs-built_in">rm</span> -rf rustlings <span class="hljs-comment"># or your custom folder name, if you chose and or renamed it</span>
 </code></pre>
 <p>Second, run <code>cargo uninstall</code> to remove the <code>rustlings</code> binary:</p>
 <pre><code class="language-bash">cargo uninstall rustlings
@@ -327,7 +420,7 @@ You can make them mutable by adding <code>mut</code> in front of the variable na
 <li><a href="https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html">Variables and Mutability</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// variables1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// variables1.rs</span>
 <span class="hljs-comment">// Make me compile!</span>
 <span class="hljs-comment">// Execute `rustlings hint variables1` or use the `hint` watch subcommand for a hint.</span>
 
@@ -338,7 +431,7 @@ You can make them mutable by adding <code>mut</code> in front of the variable na
     <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x has the value {}&quot;</span>, x);
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// variables2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// variables2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint variables2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -362,7 +455,7 @@ in more complex code.</p>
 <li><a href="https://doc.rust-lang.org/book/ch03-03-how-functions-work.html">How Functions Work</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// functions1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// functions1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint functions1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -371,7 +464,7 @@ in more complex code.</p>
     <span class="hljs-title function_ invoke__">call_me</span>();
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// functions2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// functions2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint functions2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -395,7 +488,7 @@ in more complex code.</p>
 <li><a href="https://doc.rust-lang.org/book/ch03-05-control-flow.html#if-expressions">Control Flow - if expressions</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// if1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// if1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint if1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -423,7 +516,7 @@ in more complex code.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// if2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// if2.rs</span>
 
 <span class="hljs-comment">// Step 1: Make me compile!</span>
 <span class="hljs-comment">// Step 2: Get the bar_for_fuzz and default_to_baz tests passing!</span>
@@ -471,7 +564,7 @@ compiler. In this section, we&#39;ll go through the most important ones.</p>
 <li><a href="https://doc.rust-lang.org/stable/book/ch04-03-slices.html">The Slice Type</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// primitive_types1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// primitive_types1.rs</span>
 <span class="hljs-comment">// Fill in the rest of the line that has code missing!</span>
 <span class="hljs-comment">// No hints, there&#x27;s no tricks, just get used to typing these :)</span>
 
@@ -491,7 +584,7 @@ compiler. In this section, we&#39;ll go through the most important ones.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// primitive_types2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// primitive_types2.rs</span>
 <span class="hljs-comment">// Fill in the rest of the line that has code missing!</span>
 <span class="hljs-comment">// No hints, there&#x27;s no tricks, just get used to typing these :)</span>
 
@@ -541,7 +634,7 @@ the other useful data structure, hash maps, later.</p>
 <li><a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.map"><code>map</code></a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// vecs1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// vecs1.rs</span>
 <span class="hljs-comment">// Your task is to create a `Vec` which holds the exact same elements</span>
 <span class="hljs-comment">// as in the array `a`.</span>
 <span class="hljs-comment">// Make me compile and pass the test!</span>
@@ -567,7 +660,7 @@ the other useful data structure, hash maps, later.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// vecs2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// vecs2.rs</span>
 <span class="hljs-comment">// A Vec of even numbers is given. Your task is to complete the loop</span>
 <span class="hljs-comment">// so that each number in the Vec is multiplied by 2.</span>
 <span class="hljs-comment">//</span>
@@ -628,7 +721,7 @@ the other useful data structure, hash maps, later.</p>
 <li><a href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html">Reference and borrowing</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// move_semantics1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// move_semantics1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint move_semantics1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -655,8 +748,7 @@ the other useful data structure, hash maps, later.</p>
     vec
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// move_semantics2.rs</span>
-<span class="hljs-comment">// Make me compile without changing line 13 or moving line 10!</span>
+<pre><code class="language-rs"><span class="hljs-comment">// move_semantics2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint move_semantics2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// Expected output:</span>
@@ -668,6 +760,7 @@ the other useful data structure, hash maps, later.</p>
 <span class="hljs-keyword">fn</span> <span class="hljs-title function_">main</span>() {
     <span class="hljs-keyword">let</span> <span class="hljs-variable">vec0</span> = <span class="hljs-type">Vec</span>::<span class="hljs-title function_ invoke__">new</span>();
 
+    <span class="hljs-comment">// Do not move the following line!</span>
     <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut </span><span class="hljs-variable">vec1</span> = <span class="hljs-title function_ invoke__">fill_vec</span>(vec0);
 
     <span class="hljs-comment">// Do not change the following line!</span>
@@ -698,7 +791,7 @@ the other useful data structure, hash maps, later.</p>
 <li><a href="https://doc.rust-lang.org/book/ch05-03-method-syntax.html">Method Syntax</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// structs1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// structs1.rs</span>
 <span class="hljs-comment">// Address all the TODOs to make the tests pass!</span>
 <span class="hljs-comment">// Execute `rustlings hint structs1` or use the `hint` watch subcommand for a hint.</span>
 
@@ -747,7 +840,7 @@ the other useful data structure, hash maps, later.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// structs2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// structs2.rs</span>
 <span class="hljs-comment">// Address all the TODOs to make the tests pass!</span>
 <span class="hljs-comment">// Execute `rustlings hint structs2` or use the `hint` watch subcommand for a hint.</span>
 
@@ -807,7 +900,7 @@ Useful in combination with enums is Rust&#39;s &quot;pattern matching&quot; faci
 <li><a href="https://doc.rust-lang.org/book/ch18-03-pattern-syntax.html">Pattern syntax</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// enums1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// enums1.rs</span>
 <span class="hljs-comment">// No hints this time! ;)</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -824,7 +917,7 @@ Useful in combination with enums is Rust&#39;s &quot;pattern matching&quot; faci
     <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, Message::ChangeColor);
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// enums2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// enums2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint enums2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -864,7 +957,7 @@ to identify and create them, as well as use them.</p>
 <li><a href="https://doc.rust-lang.org/book/ch08-02-strings.html">Strings</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// strings1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// strings1.rs</span>
 <span class="hljs-comment">// Make me compile without changing the function signature!</span>
 <span class="hljs-comment">// Execute `rustlings hint strings1` or use the `hint` watch subcommand for a hint.</span>
 
@@ -879,7 +972,7 @@ to identify and create them, as well as use them.</p>
     <span class="hljs-string">&quot;blue&quot;</span>
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// strings2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// strings2.rs</span>
 <span class="hljs-comment">// Make me compile without changing the function signature!</span>
 <span class="hljs-comment">// Execute `rustlings hint strings2` or use the `hint` watch subcommand for a hint.</span>
 
@@ -907,7 +1000,7 @@ to identify and create them, as well as use them.</p>
 <li><a href="https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html">The Module System</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// modules1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// modules1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint modules1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -928,7 +1021,7 @@ to identify and create them, as well as use them.</p>
     sausage_factory::<span class="hljs-title function_ invoke__">make_sausage</span>();
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// modules2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// modules2.rs</span>
 <span class="hljs-comment">// You can bring module paths into scopes and provide new names for them with the</span>
 <span class="hljs-comment">// &#x27;use&#x27; and &#x27;as&#x27; keywords. Fix these &#x27;use&#x27; statements to make the code compile.</span>
 <span class="hljs-comment">// Execute `rustlings hint modules2` or use the `hint` watch subcommand for a hint.</span>
@@ -972,7 +1065,7 @@ talking about Vecs.</p>
 <li><a href="https://doc.rust-lang.org/book/ch08-03-hash-maps.html">Storing Keys with Associated Values in Hash Maps</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// hashmaps1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// hashmaps1.rs</span>
 <span class="hljs-comment">// A basket of fruits in the form of a hash map needs to be defined.</span>
 <span class="hljs-comment">// The key represents the name of the fruit and the value represents</span>
 <span class="hljs-comment">// how many of that particular fruit is in the basket. You have to put</span>
@@ -1016,7 +1109,7 @@ talking about Vecs.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// hashmaps2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// hashmaps2.rs</span>
 <span class="hljs-comment">// We&#x27;re collecting different fruits to bake a delicious fruit cake.</span>
 <span class="hljs-comment">// For this, we have a basket, which we&#x27;ll represent in the form of a hash</span>
 <span class="hljs-comment">// map. The key represents the name of each fruit we collect and the value</span>
@@ -1124,7 +1217,7 @@ Option types are very common in Rust code, as they have a number of uses:</p>
 <li><a href="https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html">while let</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// options1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// options1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint options1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -1160,7 +1253,7 @@ Option types are very common in Rust code, as they have a number of uses:</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// options2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// options2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint options2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -1209,7 +1302,7 @@ For example, if you try to open a file and that operation fails because the file
 <li><a href="https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/boxing_errors.html">Boxing errors</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// errors1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// errors1.rs</span>
 <span class="hljs-comment">// This function refuses to generate text to be printed on a nametag if</span>
 <span class="hljs-comment">// you pass it an empty string. It&#x27;d be nicer if it explained what the problem</span>
 <span class="hljs-comment">// was, instead of just sometimes returning `None`. Thankfully, Rust has a similar</span>
@@ -1249,7 +1342,7 @@ For example, if you try to open a file and that operation fails because the file
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// errors2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// errors2.rs</span>
 <span class="hljs-comment">// Say we&#x27;re writing a game where you can buy items with tokens. All items cost</span>
 <span class="hljs-comment">// 5 tokens, and whenever you purchase items there is a processing fee of 1</span>
 <span class="hljs-comment">// token. A player of the game will type in how many items they want to buy,</span>
@@ -1311,7 +1404,7 @@ The simplest and most common use of generics is for type parameters.</p>
 <li><a href="https://doc.rust-lang.org/rust-by-example/generics/bounds.html">Bounds</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// This shopping list program isn&#x27;t compiling!</span>
+<pre><code class="language-rs"><span class="hljs-comment">// This shopping list program isn&#x27;t compiling!</span>
 <span class="hljs-comment">// Use your knowledge of generics to fix it.</span>
 
 <span class="hljs-comment">// Execute `rustlings hint generics1` or use the `hint` watch subcommand for a hint.</span>
@@ -1323,7 +1416,7 @@ The simplest and most common use of generics is for type parameters.</p>
     shopping_list.<span class="hljs-title function_ invoke__">push</span>(<span class="hljs-string">&quot;milk&quot;</span>);
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// This powerful wrapper provides the ability to store a positive integer value.</span>
+<pre><code class="language-rs"><span class="hljs-comment">// This powerful wrapper provides the ability to store a positive integer value.</span>
 <span class="hljs-comment">// Rewrite it using generics so that it supports wrapping ANY type.</span>
 
 <span class="hljs-comment">// Execute `rustlings hint generics2` or use the `hint` watch subcommand for a hint.</span>
@@ -1373,7 +1466,7 @@ The simplest and most common use of generics is for type parameters.</p>
 <li><a href="https://doc.rust-lang.org/book/ch10-02-traits.html">Traits</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// traits1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// traits1.rs</span>
 <span class="hljs-comment">// Time to implement some traits!</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// Your task is to implement the trait</span>
@@ -1418,7 +1511,7 @@ The simplest and most common use of generics is for type parameters.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// traits2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// traits2.rs</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// Your task is to implement the trait</span>
 <span class="hljs-comment">// `AppendBar` for a vector of strings.</span>
@@ -1460,7 +1553,7 @@ The simplest and most common use of generics is for type parameters.</p>
 <li><a href="https://doc.rust-lang.org/book/ch11-01-writing-tests.html">Writing Tests</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// tests1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// tests1.rs</span>
 <span class="hljs-comment">// Tests are important to ensure that your code does what you think it should do.</span>
 <span class="hljs-comment">// Tests can be run on this file with the following command:</span>
 <span class="hljs-comment">// rustlings run tests1</span>
@@ -1479,7 +1572,7 @@ The simplest and most common use of generics is for type parameters.</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// tests2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// tests2.rs</span>
 <span class="hljs-comment">// This test has a problem with it -- make the test compile! Make the test</span>
 <span class="hljs-comment">// pass! Make the test fail!</span>
 <span class="hljs-comment">// Execute `rustlings hint tests2` or use the `hint` watch subcommand for a hint.</span>
@@ -1516,7 +1609,7 @@ learning to write lifetime annotations.</p>
 <li><a href="https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html">Validating References with Lifetimes</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// lifetimes1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// lifetimes1.rs</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// The Rust compiler needs to know how to check whether supplied references are</span>
 <span class="hljs-comment">// valid, so that it can let the programmer know if a reference is at risk</span>
@@ -1543,7 +1636,7 @@ learning to write lifetime annotations.</p>
     <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The longest string is &#x27;{}&#x27;&quot;</span>, result);
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// lifetimes2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// lifetimes2.rs</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// So if the compiler is just validating the references passed</span>
 <span class="hljs-comment">// to the annotated parameters and the return type, what do</span>
@@ -1581,7 +1674,7 @@ learning to write lifetime annotations.</p>
 <li><a href="https://doc.rust-lang.org/stable/std/iter/">Iterator documentation</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// iterators1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// iterators1.rs</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">//  Make me compile by filling in the `???`s</span>
 <span class="hljs-comment">//</span>
@@ -1606,7 +1699,7 @@ learning to write lifetime annotations.</p>
     <span class="hljs-built_in">assert_eq!</span>(my_iterable_fav_fruits.<span class="hljs-title function_ invoke__">next</span>(), ???);     <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Step 4</span>
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// iterators2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// iterators2.rs</span>
 <span class="hljs-comment">// In this exercise, you&#x27;ll learn some of the unique advantages that iterators</span>
 <span class="hljs-comment">// can offer. Follow the steps to complete the exercise.</span>
 <span class="hljs-comment">// Execute `rustlings hint iterators2` or use the `hint` watch subcommand for a hint.</span>
@@ -1678,7 +1771,7 @@ Within your program, you can also have independent parts that run simultaneously
 <li><a href="https://doc.rust-lang.org/book/ch16-01-threads.html">Using Threads to Run Code Simultaneously</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// threads1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// threads1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint threads1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// This program spawns multiple threads that each run for at least 250ms,</span>
@@ -1717,7 +1810,7 @@ Within your program, you can also have independent parts that run simultaneously
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// threads2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// threads2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint threads2` or use the `hint` watch subcommand for a hint.</span>
 <span class="hljs-comment">// Building on the last exercise, we want all of the threads to complete their work but this time</span>
 <span class="hljs-comment">// the spawned threads need to be in charge of updating a shared value: JobStatus.jobs_completed</span>
@@ -1766,7 +1859,7 @@ Smart pointers in Rust often own the data they point to, while references only b
 <li><a href="https://doc.rust-lang.org/std/borrow/enum.Cow.html">Cow Documentation</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// arc1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// arc1.rs</span>
 <span class="hljs-comment">// In this exercise, we are given a Vec of u32 called &quot;numbers&quot; with values ranging</span>
 <span class="hljs-comment">// from 0 to 99 -- [ 0, 1, 2, ..., 98, 99 ]</span>
 <span class="hljs-comment">// We would like to use this set of numbers within 8 different threads simultaneously.</span>
@@ -1809,7 +1902,7 @@ Smart pointers in Rust often own the data they point to, while references only b
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// box1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// box1.rs</span>
 <span class="hljs-comment">//</span>
 <span class="hljs-comment">// At compile time, Rust needs to know how much space a type takes up. This becomes problematic</span>
 <span class="hljs-comment">// for recursive types, where a value can have as part of itself another value of the same type.</span>
@@ -1866,7 +1959,7 @@ Smart pointers in Rust often own the data they point to, while references only b
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// cow1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// cow1.rs</span>
 
 <span class="hljs-comment">// This exercise explores the Cow, or Clone-On-Write type.</span>
 <span class="hljs-comment">// Cow is a clone-on-write smart pointer.</span>
@@ -1920,7 +2013,8 @@ Smart pointers in Rust often own the data they point to, while references only b
     <span class="hljs-keyword">fn</span> <span class="hljs-title function_">owned_no_mutation</span>() <span class="hljs-punctuation">-&gt;</span> <span class="hljs-type">Result</span>&lt;(), &amp;<span class="hljs-symbol">&#x27;static</span> <span class="hljs-type">str</span>&gt; {
         <span class="hljs-comment">// We can also pass `slice` without `&amp;` so Cow owns it directly.</span>
         <span class="hljs-comment">// In this case no mutation occurs and thus also no clone,</span>
-        <span class="hljs-comment">// but the result is still owned because it always was.</span>
+        <span class="hljs-comment">// but the result is still owned because it was never borrowed</span>
+        <span class="hljs-comment">// or mutated.</span>
         <span class="hljs-keyword">let</span> <span class="hljs-variable">slice</span> = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>];
         <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut </span><span class="hljs-variable">input</span> = Cow::<span class="hljs-title function_ invoke__">from</span>(slice);
         <span class="hljs-keyword">match</span> <span class="hljs-title function_ invoke__">abs_all</span>(&amp;<span class="hljs-keyword">mut</span> input) {
@@ -1941,7 +2035,7 @@ Smart pointers in Rust often own the data they point to, while references only b
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// rc1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// rc1.rs</span>
 <span class="hljs-comment">// In this exercise, we want to express the concept of multiple owners via the Rc&lt;T&gt; type.</span>
 <span class="hljs-comment">// This is a model of our solar system - there is a Sun type and multiple Planets.</span>
 <span class="hljs-comment">// The Planets take ownership of the sun, indicating that they revolve around the sun.</span>
@@ -2056,7 +2150,7 @@ of exercises to Rustlings, but is all about learning to write Macros.</p>
 <li><a href="https://veykril.github.io/tlborm/">The Little Book of Rust Macros</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// macros1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// macros1.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint macros1` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -2071,7 +2165,7 @@ of exercises to Rustlings, but is all about learning to write Macros.</p>
     <span class="hljs-title function_ invoke__">my_macro</span>();
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// macros2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// macros2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint macros2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -2097,7 +2191,7 @@ If not you can install it manually via <code>rustup component add clippy</code>.
 <li><a href="https://github.com/rust-lang/rust-clippy">GitHub Repository</a>.</li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// clippy1.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// clippy1.rs</span>
 <span class="hljs-comment">// The Clippy tool is a collection of lints to analyze your code</span>
 <span class="hljs-comment">// so you can catch common mistakes and improve your Rust code.</span>
 <span class="hljs-comment">//</span>
@@ -2121,7 +2215,7 @@ If not you can install it manually via <code>rustup component add clippy</code>.
     )
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// clippy2.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// clippy2.rs</span>
 <span class="hljs-comment">// Execute `rustlings hint clippy2` or use the `hint` watch subcommand for a hint.</span>
 
 <span class="hljs-comment">// I AM NOT DONE</span>
@@ -2156,7 +2250,7 @@ The traits are the following:</p>
 <li><a href="https://doc.rust-lang.org/std/str/trait.FromStr.html"><code>FromStr</code> trait</a></li>
 </ul>
 
-<pre><code class="language-rs hljs"><span class="hljs-comment">// AsRef and AsMut allow for cheap reference-to-reference conversions.</span>
+<pre><code class="language-rs"><span class="hljs-comment">// AsRef and AsMut allow for cheap reference-to-reference conversions.</span>
 <span class="hljs-comment">// Read more about them at https://doc.rust-lang.org/std/convert/trait.AsRef.html</span>
 <span class="hljs-comment">// and https://doc.rust-lang.org/std/convert/trait.AsMut.html, respectively.</span>
 <span class="hljs-comment">// Execute `rustlings hint as_ref_mut` or use the `hint` watch subcommand for a hint.</span>
@@ -2218,7 +2312,7 @@ The traits are the following:</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// The From trait is used for value-to-value conversions.</span>
+<pre><code class="language-rs"><span class="hljs-comment">// The From trait is used for value-to-value conversions.</span>
 <span class="hljs-comment">// If From is implemented correctly for a type, the Into trait should work conversely.</span>
 <span class="hljs-comment">// You can read more about it at https://doc.rust-lang.org/std/convert/trait.From.html</span>
 <span class="hljs-comment">// Execute `rustlings hint from_into` or use the `hint` watch subcommand for a hint.</span>
@@ -2353,7 +2447,7 @@ The traits are the following:</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// from_str.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// from_str.rs</span>
 <span class="hljs-comment">// This is similar to from_into.rs, but this time we&#x27;ll implement `FromStr`</span>
 <span class="hljs-comment">// and return errors instead of falling back to a default value.</span>
 <span class="hljs-comment">// Additionally, upon implementing FromStr, you can use the `parse` method</span>
@@ -2481,7 +2575,7 @@ The traits are the following:</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// try_from_into.rs</span>
+<pre><code class="language-rs"><span class="hljs-comment">// try_from_into.rs</span>
 <span class="hljs-comment">// TryFrom is a simple and safe type conversion that may fail in a controlled way under some circumstances.</span>
 <span class="hljs-comment">// Basically, this is the same as From. The main difference is that this should return a Result type</span>
 <span class="hljs-comment">// instead of the target type itself.</span>
@@ -2672,7 +2766,7 @@ The traits are the following:</p>
     }
 }
 </code></pre>
-<pre><code class="language-rs hljs"><span class="hljs-comment">// Type casting in Rust is done via the usage of the `as` operator.</span>
+<pre><code class="language-rs"><span class="hljs-comment">// Type casting in Rust is done via the usage of the `as` operator.</span>
 <span class="hljs-comment">// Please note that the `as` operator is not only used when type casting.</span>
 <span class="hljs-comment">// It also helps with renaming imports.</span>
 <span class="hljs-comment">//</span>
