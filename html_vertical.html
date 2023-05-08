@@ -111,7 +111,7 @@ html, body {
   overflow: hidden;
   overscroll-behavior: none;
 }
-a{
+a {
   color: dodgerblue;
 }
 li {
@@ -123,6 +123,10 @@ p:empty {
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+pre > code {
+  display: block;
+  padding: 1em;
 }
 .slide {
   padding: 1em 2em;
@@ -274,9 +278,10 @@ pre {
 
 code {
   font-family: Source Code Pro, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  font-size: smaller;
+  font-size: 85%;
 }
 #slides {
+  font-family: system-ui;
   font-size: large;
   font-weight: normal;
   line-height: 1.5;
