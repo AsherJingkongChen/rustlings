@@ -136,3 +136,7 @@ codeslide:
 
 ---
 # Thanks to all contributors of [rustlings](https://github.com/rust-lang/rustlings)!
+
+See other CodeSlide CLI examples [here](https://github.com/AsherJingkongChen/codeslide/tree/main/applications/cli/examples)
+
+See the installation guide of CodeSlide CLI [here](https://github.com/AsherJingkongChen/codeslide/tree/main/applications/cli/README.md#installation)
