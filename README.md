@@ -4,8 +4,8 @@
 This repo is forked from [rust-lang/rustlings](https://github.com/rust-lang/rustlings/). It collects Rust language examples.
 
 ## Links
-- [CodeSlide CLI](https://github.com/AsherJingkongChen/codeslide/tree/main/applications/cli)
-- [Demo on GitHub Pages!](https://asherjingkongchen.github.io/rustlings-as-codeslide-example/)
+- [CodeSlide CLI](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli)
+- [Demo on GitHub Pages!](https://asherjingkongchen.github.io/rustlings-as-codeslide-cli-example/)
 
 ## Configuration
 Styles
