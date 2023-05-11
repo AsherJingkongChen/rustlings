@@ -12,9 +12,6 @@ codeslide:
 # [Rustlings](https://github.com/rust-lang/rustlings) as an example of CodeSlide CLI
 
 ---
-# The repository of this example is [here](https://github.com/AsherJingkongChen/rustlings-as-codeslide-cli-example.git)
-
----
 [:slide](./README.orig.md)
 
 ---
@@ -140,6 +137,6 @@ codeslide:
 ---
 # Thanks to all contributors of [rustlings](https://github.com/rust-lang/rustlings)!
 
-See other CodeSlide CLI examples [here](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli/examples)
-
-See the installation guide of CodeSlide CLI [here](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli/README.md#installation)
+- The repository of this example is [here](https://github.com/AsherJingkongChen/rustlings-as-codeslide-cli-example.git)
+- See other CodeSlide CLI examples [here](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli/examples)
+- See the installation guide of CodeSlide CLI [here](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli/README.md#installation)
