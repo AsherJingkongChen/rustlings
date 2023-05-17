@@ -13,4 +13,5 @@ This repo is forked from [rust-lang/rustlings](https://github.com/rust-lang/rust
 - [Source Code Pro](https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap) (codeFont)
 - [Open Sans](https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap) (slideFont)
 
-Maker Script: [`./make.sh`](./make.sh)
+## Build
+- [`./make.sh`](./make.sh)
