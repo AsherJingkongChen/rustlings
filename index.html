@@ -11,7 +11,8 @@
 <link
   href="https://fonts.gstatic.com"
   rel="preconnect" crossorigin>
-<style>/*! CodeSlide slides.horizontal.css */
+<style>
+/*! CodeSlide Presets */
 a {
   color: dodgerblue;
 }
@@ -24,8 +25,6 @@ code {
 }
 html {
   overflow: hidden;
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
 }
 img {
   max-width: 100%;
@@ -48,42 +47,49 @@ video {
   max-width: 100%;
 }
 .slide {
-  min-width: calc(100vw - 4em);
-  height: calc(100vh - 2em);
   padding: 1em 2em;
-  overflow-y: scroll;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scrollbar-width: none;
-}
-.slide::-webkit-scrollbar {
-  display: none;
-}
-@media only screen and (max-width: 768px) {
-  .slide {
-    height: calc(90% - 2em);
-    height: calc(100dvh - 2em);
-  }
 }
 #slides {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 100vh;
-  overflow-x: scroll;
-  overscroll-behavior: none;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
   line-height: 1.5;
+}
+@media screen {
+  .slide {
+    min-width: calc(100vw - 4em);
+    height: calc(100vh - 2em);
+    height: calc(100dvh - 2em);
+    overflow-y: scroll;
+    scroll-margin: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scrollbar-width: none;
+  }
+  .slide::-webkit-scrollbar {
+    display: none;
+  }
+  #slides {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: scroll;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
 }
 @media print {
   @page {
     margin: 0;
-    size: auto;
   }
-  #slides {
-    width: auto;
-    height: auto;
+  html {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  /* h1, h2, h3, h4, h5, h6 {
+    break-after: avoid-page;
+  } */
+  .slide {
+    break-after: page;
   }
 }
 
@@ -252,16 +258,17 @@ code {
   font-family: Source Code Pro, ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 pre > code {
-  font-size: 0.875em;
+  font-size: 0.875rem;
   font-weight: normal;
 }
 
 /* CodeSlide slideFont properties */
 #slides {
   font-family: Open Sans, system-ui;
-  font-size: large;
+  font-size: 1rem;
   font-weight: normal;
-}</style>
+}
+</style>
 </head>
 <body class="hljs">
 <div id="slides">

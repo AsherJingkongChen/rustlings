@@ -1,15 +1,15 @@
 ---
 codeslide:
-  version: 0.13.0
-  format: pdf
-  pageSize: A3
+  version: 0.14.0
+  format: html
   codeFont:
     family: Source Code Pro
     rule: https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap
-    size: 0.875em
+    size: 0.875rem
   slideFont:
     family: Open Sans
     rule: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap
+    size: 1rem
   styles:
     - https://doc.rust-lang.org/book/tomorrow-night.css
 
