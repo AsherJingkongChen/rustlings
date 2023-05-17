@@ -1,11 +1,16 @@
 ---
 codeslide:
-  version: 0.12.0
-  fontFamily: Source Code Pro
+  version: 0.13.0
   format: html
   layout: horizontal
+  codeFont:
+    family: Source Code Pro
+    rule: https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap
+    size: 0.875em
+  slideFont:
+    family: Open Sans
+    rule: https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap
   styles:
-    - https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap
     - https://doc.rust-lang.org/book/tomorrow-night.css
 
 ---
