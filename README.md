@@ -5,6 +5,7 @@ This repo is forked from [rust-lang/rustlings](https://github.com/rust-lang/rust
 
 ## Links
 - [CodeSlide CLI](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli)
+- [Other examples of CodeSlide CLI](https://github.com/AsherJingkongChen/codeslide/tree/main/app/cli/examples)
 - [Demo on GitHub Pages!](https://asherjingkongchen.github.io/rustlings-as-codeslide-cli-example/)
 
 ## Configuration
