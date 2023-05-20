@@ -287,15 +287,15 @@ pre > code {
 <p>You will need to have Rust installed. You can get it by visiting <a href="https://rustup.rs">https://rustup.rs</a>. This&#39;ll also install Cargo, Rust&#39;s package/project manager.</p>
 <h2 id="macoslinux">MacOS/Linux</h2>
 <p>Just run:</p>
-<pre><code class="language-bash">curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
+<pre><code class="language-bash hljs">curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
 </code></pre>
 <p>Or if you want it to be installed to a different path:</p>
-<pre><code class="language-bash">curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash -s mypath/
+<pre><code class="language-bash hljs">curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash -s mypath/
 </code></pre>
 <p>This will install Rustlings and give you access to the <code>rustlings</code> command. Run it to get started!</p>
 <h3 id="nix">Nix</h3>
 <p>Basically: Clone the repository at the latest tag, finally run <code>nix develop</code> or <code>nix-shell</code>.</p>
-<pre><code class="language-bash"><span class="hljs-comment"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)</span>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)</span>
 git <span class="hljs-built_in">clone</span> -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
 <span class="hljs-built_in">cd</span> rustlings
 <span class="hljs-comment"># if nix version &gt; 2.3</span>
@@ -305,10 +305,10 @@ nix-shell
 </code></pre>
 <h2 id="windows">Windows</h2>
 <p>In PowerShell (Run as Administrator), set <code>ExecutionPolicy</code> to <code>RemoteSigned</code>:</p>
-<pre><code class="language-ps1"><span class="hljs-built_in">Set-ExecutionPolicy</span> <span class="hljs-literal">-ExecutionPolicy</span> RemoteSigned <span class="hljs-literal">-Scope</span> CurrentUser
+<pre><code class="language-ps1 hljs"><span class="hljs-built_in">Set-ExecutionPolicy</span> <span class="hljs-literal">-ExecutionPolicy</span> RemoteSigned <span class="hljs-literal">-Scope</span> CurrentUser
 </code></pre>
 <p>Then, you can run:</p>
-<pre><code class="language-ps1"><span class="hljs-built_in">Start-BitsTransfer</span> <span class="hljs-literal">-Source</span> https://raw.githubusercontent.com/rust<span class="hljs-literal">-lang</span>/rustlings/main/install.ps1 <span class="hljs-literal">-Destination</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1; <span class="hljs-built_in">Unblock-File</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1; <span class="hljs-built_in">Invoke-Expression</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1
+<pre><code class="language-ps1 hljs"><span class="hljs-built_in">Start-BitsTransfer</span> <span class="hljs-literal">-Source</span> https://raw.githubusercontent.com/rust<span class="hljs-literal">-lang</span>/rustlings/main/install.ps1 <span class="hljs-literal">-Destination</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1; <span class="hljs-built_in">Unblock-File</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1; <span class="hljs-built_in">Invoke-Expression</span> <span class="hljs-variable">$env:TMP</span>/install_rustlings.ps1
 </code></pre>
 <p>To install Rustlings. Same as on MacOS/Linux, you will have access to the <code>rustlings</code> command after it. Keep in mind that this works best in PowerShell, and any other terminals may give you errors.</p>
 <p>If you get a permission denied message, you might have to exclude the directory where you cloned Rustlings in your antivirus.</p>
@@ -317,39 +317,39 @@ nix-shell
 <p><a href="https://github.com/codespaces/new/?repo=rust-lang%2Frustlings&ref=main"><img src="https://github.com/codespaces/badge.svg" alt="Open Rustlings On Codespaces"></a></p>
 <h2 id="manually">Manually</h2>
 <p>Basically: Clone the repository at the latest tag, run <code>cargo install --path .</code>.</p>
-<pre><code class="language-bash"><span class="hljs-comment"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)</span>
+<pre><code class="language-bash hljs"><span class="hljs-comment"># find out the latest version at https://github.com/rust-lang/rustlings/releases/latest (on edit 5.4.1)</span>
 git <span class="hljs-built_in">clone</span> -b 5.4.1 --depth 1 https://github.com/rust-lang/rustlings
 <span class="hljs-built_in">cd</span> rustlings
 cargo install --force --path .
 </code></pre>
 <p>If there are installation errors, ensure that your toolchain is up to date. For the latest, run:</p>
-<pre><code class="language-bash">rustup update
+<pre><code class="language-bash hljs">rustup update
 </code></pre>
 <p>Then, same as above, run <code>rustlings</code> to get started.</p>
 <h2 id="doing-exercises">Doing exercises</h2>
 <p>The exercises are sorted by topic and can be found in the subdirectory <code>rustlings/exercises/&lt;topic&gt;</code>. For every topic there is an additional README file with some resources to get you started on the topic. We really recommend that you have a look at them before you start.</p>
 <p>The task is simple. Most exercises contain an error that keeps them from compiling, and it&#39;s up to you to fix it! Some exercises are also run as tests, but rustlings handles them all the same. To run the exercises in the recommended order, execute:</p>
-<pre><code class="language-bash">rustlings watch
+<pre><code class="language-bash hljs">rustlings watch
 </code></pre>
 <p>This will try to verify the completion of every exercise in a predetermined order (what we think is best for newcomers). It will also rerun automatically every time you change a file in the <code>exercises/</code> directory. If you want to only run it once, you can use:</p>
-<pre><code class="language-bash">rustlings verify
+<pre><code class="language-bash hljs">rustlings verify
 </code></pre>
 <p>This will do the same as watch, but it&#39;ll quit after running.</p>
 <p>In case you want to go by your own order, or want to only verify a single exercise, you can run:</p>
-<pre><code class="language-bash">rustlings run myExercise1
+<pre><code class="language-bash hljs">rustlings run myExercise1
 </code></pre>
 <p>Or simply use the following command to run the next unsolved exercise in the course:</p>
-<pre><code class="language-bash">rustlings run next
+<pre><code class="language-bash hljs">rustlings run next
 </code></pre>
 <p>In case you get stuck, you can run the following command to get a hint for your
 exercise:</p>
-<pre><code class="language-bash">rustlings hint myExercise1
+<pre><code class="language-bash hljs">rustlings hint myExercise1
 </code></pre>
 <p>You can also get the hint for the next unsolved exercise with the following command:</p>
-<pre><code class="language-bash">rustlings hint next
+<pre><code class="language-bash hljs">rustlings hint next
 </code></pre>
 <p>To check your progress, you can run the following command:</p>
-<pre><code class="language-bash">rustlings list
+<pre><code class="language-bash hljs">rustlings list
 </code></pre>
 <h2 id="testing-yourself">Testing yourself</h2>
 <p>After every couple of sections, there will be a quiz that&#39;ll test your knowledge on a bunch of sections at once. These quizzes are found in <code>exercises/quizN.rs</code>.</p>
@@ -360,10 +360,10 @@ exercise:</p>
 <h2 id="uninstalling-rustlings">Uninstalling Rustlings</h2>
 <p>If you want to remove Rustlings from your system, there are two steps. First, you&#39;ll need to remove the exercises folder that the install script created
 for you:</p>
-<pre><code class="language-bash"><span class="hljs-built_in">rm</span> -rf rustlings <span class="hljs-comment"># or your custom folder name, if you chose and or renamed it</span>
+<pre><code class="language-bash hljs"><span class="hljs-built_in">rm</span> -rf rustlings <span class="hljs-comment"># or your custom folder name, if you chose and or renamed it</span>
 </code></pre>
 <p>Second, run <code>cargo uninstall</code> to remove the <code>rustlings</code> binary:</p>
-<pre><code class="language-bash">cargo uninstall rustlings
+<pre><code class="language-bash hljs">cargo uninstall rustlings
 </code></pre>
 <p>Now you should be done!</p>
 <h2 id="contributing">Contributing</h2>
